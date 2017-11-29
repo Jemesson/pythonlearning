@@ -51,7 +51,7 @@ print_students()
 while True:
     try:
         ask = input("Do you want to add a student? (Y/N) ")
-        ask = ask.strip().upper()xx
+        ask = ask.strip().upper()
 
         if ask == "N":
             break
