@@ -10,7 +10,5 @@ print(testing.__next__())
 print(testing.__next__())
 print(testing.__next__())
 print(testing.__next__())
-print(testing.__next__())
 
-double_x = lambda x: x*2
-print(double_x)
+print(lambda x: x*2)
