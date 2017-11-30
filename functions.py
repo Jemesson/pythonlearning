@@ -3,10 +3,14 @@ import os
 students = []
 
 
+def read_students(f):
+    yield from f
+
+
 def read_file():
     try:
         file = open("student.txt", "r")
-        for student in file.readlines():
+        for student in read_students(file):
             add_student(student)
         file.close()
     except IOError:
