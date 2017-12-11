@@ -1,4 +1,7 @@
 from math import pi
+from functools import reduce
+from operator import add
+
 
 def add_number(x: int, y: int) -> int:
     return x + y
@@ -89,3 +92,28 @@ except TypeError as e:
     print(e)
 except Exception:
     print("generic error")
+
+y = [round(pi * pow(r, 2), 5) for r in range(1, 10)]
+print(y)
+
+# lambda example
+f = lambda x, y: x + y
+print(f(2, 3))
+
+# map example - map(func, seq)
+c = [39.5, 35, 27, 30]
+f = list(map(lambda x: round((float(9)/5) * x + 32, 3), c))
+print(c)
+print(f)
+
+# filter - filter(function, list)
+fib = [0, 1 , 1, 2, 3, 5, 8, 13, 21, 34, 55]
+result = list(map(lambda x: pow(x, 2), list(filter(lambda val: val % 2 == 0, fib))))
+
+# get the max of a list
+f = lambda a,b: a if a > b else b
+res = reduce(f, [-1, 29.99, 29.999, 3.3])
+
+# operator add
+y = reduce(add, map(int, filter(lambda num: num.isnumeric(), "3+4+5+6++".split("+"))))
+print(y)

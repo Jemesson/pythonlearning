@@ -11,4 +11,5 @@ print(testing.__next__())
 print(testing.__next__())
 print(testing.__next__())
 
-print(lambda x: x*2)
+y = lambda x: x*2
+print(y(4))
