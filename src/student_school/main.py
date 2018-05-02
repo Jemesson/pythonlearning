@@ -1,5 +1,5 @@
-from student_school.student import Student
-from student_school.hs_student import HighSchoolStudent
+from src.student_school.student import Student
+from src.student_school.hs_student import HighSchoolStudent
 
 students = []
 

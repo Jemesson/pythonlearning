@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 
-from student_school.student import Student
+from src.student_school.student import Student
 
 app = Flask(__name__)
 
